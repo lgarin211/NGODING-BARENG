@@ -1,7 +1,8 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Welcome extends CI_Controller
+{
 
 	/**
 	 * Index Page for this controller.
@@ -20,6 +21,31 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$this->load->model('ITEMS_MODEL');
+		$data['items'] = $this->ITEMS_MODEL->get_all();
+
+		$this->load->view('template/head');
+		$this->load->view('template/sitebar');
+		$this->load->view('template/topbar');
+		$this->load->view('conten/home', $data);
+		$this->load->view('template/foot');
+	}
+	public function create()
+	{
+		if (!$_POST) {
+			$this->load->view('template/head');
+			$this->load->view('template/sitebar');
+			$this->load->view('template/topbar');
+			$this->load->view('conten/upload');
+			$this->load->view('template/foot');
+		} else {
+			$this->kirim($_POST);
+		}
+	}
+	private function kirim($data)
+	{
+		$this->load->model('ITEMS_MODEL');
+		$this->ITEMS_MODEL->create($data);
+		redirect('welcome');
 	}
 }
