@@ -7,7 +7,10 @@ class User extends CI_Controller
 	{
 		$this->load->model('ITEMS_MODEL');
 		$data['items'] = $this->ITEMS_MODEL->get_all();
+		$this->load->view('template/head');
+		$this->load->view('template/topbar');
 		$this->load->view('user/all', $data);
+		$this->load->view('template/foot');
 	}
 
 	public function view()
@@ -17,14 +20,21 @@ class User extends CI_Controller
 		// die;
 		$this->load->model('ITEMS_MODEL');
 		$data['items'] = $this->ITEMS_MODEL->get_one($id);
+
+		$this->load->view('template/head');
+		$this->load->view('template/topbar');
 		$this->load->view('user/view', $data);
+		$this->load->view('template/foot');
 	}
 	public function buy()
 	{
 		$id = $_GET['id'];
 		$this->load->model('ITEMS_MODEL');
 		$data['items'] = $this->ITEMS_MODEL->get_one($id);
+		$this->load->view('template/head');
+		$this->load->view('template/topbar');
 		$this->load->view('user/confirmasi', $data);
+		$this->load->view('template/foot');
 	}
 	public function upload()
 	{
