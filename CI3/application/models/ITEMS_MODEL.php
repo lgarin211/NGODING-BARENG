@@ -3,7 +3,7 @@ class ITEMS_MODEL extends CI_Model
 {
 	public function get_all()
 	{
-		$query = $this->db->get('item');
+		$query = $this->db->get('item',2);
 		return $query->result();
 	}
 	public function create($data)

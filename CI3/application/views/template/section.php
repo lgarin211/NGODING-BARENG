@@ -1,4 +1,42 @@
+<!-- start section sitebar -->
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
+    	<!-- Sidebar - Brand -->
+    	<a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+    		<div class="sidebar-brand-icon rotate-n-15">
+    			<i class="fas fa-laugh-wink"></i>
+    		</div>
+    		<div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+    	</a>
+
+    	<!-- Divider -->
+    	<hr class="sidebar-divider my-0">
+
+    	<!-- Nav Item - Dashboard -->
+    	<li class="nav-item">
+    		<a class="nav-link" href="http://localhost/NGODING-BARENG/CI3/welcome/home">
+    			<i class="fas fa-fw fa-tachometer-alt"></i>
+    			<span>Dashboard</span></a>
+    	</li>
+
+    	<!-- Nav Item - USER -->
+    	<li class="nav-item">
+    		<a class="nav-link" href="http://localhost/NGODING-BARENG/CI3/user">
+    			<i class="fas fa-fw fa-tachometer-alt"></i>
+    			<span>USER VIEW</span></a>
+    	</li>
+    	<!-- Divider -->
+    	<hr class="sidebar-divider">
+
+    	<!-- Sidebar Toggler (Sidebar) -->
+    	<div class="text-center d-none d-md-inline">
+    		<button class="rounded-circle border-0" id="sidebarToggle"></button>
+    	</div>
+
+    </ul>
+    <!-- End of Sidebar -->
+<!-- end section sitebar -->
 <!-- start section topbar -->
 <div id="content-wrapper" class="d-flex flex-column">
 
@@ -59,7 +97,7 @@
 					</a>
 					<!-- Dropdown - User Information -->
 					<div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-						<a class="dropdown-item" href="<?= base_url('welcome'); ?>">
+						<a class="dropdown-item" href="http://localhost/NGODING-BARENG/CI3/welcome">
 							<i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
 							My Market
 						</a>
@@ -73,3 +111,13 @@
 		</nav>
 		<!-- End of Topbar -->
 	<!-- end section topbar -->
+<!-- start section contain -->
+ <!-- Begin Page Content -->
+ <div class="container-fluid">
+
+<!-- Page Heading -->
+<h1 class="h3 mb-4 text-gray-800">agustinus</h1>
+
+</div>
+<!-- /.container-fluid -->
+<!-- end section contein-->

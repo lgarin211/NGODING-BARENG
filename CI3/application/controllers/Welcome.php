@@ -25,9 +25,10 @@ class Welcome extends CI_Controller
 		$data['items'] = $this->ITEMS_MODEL->get_all();
 
 		$this->load->view('template/head');
-		$this->load->view('template/sitebar');
-		$this->load->view('template/topbar');
-		$this->load->view('conten/home', $data);
+		$this->load->view('template/section');
+		// $this->load->view('template/sitebar');
+		// $this->load->view('template/topbar');
+		// $this->load->view('template/conten', $data);
 		$this->load->view('template/foot');
 	}
 	public function create()
